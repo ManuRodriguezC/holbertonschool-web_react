@@ -10,7 +10,7 @@ module.exports = {
   footer: './modules/footer/footer.js'
  },
  output: {
-  filename: '[name]_bundle.js',
+  filename: '[name].bundle.js',
   path: path.resolve(__dirname, 'public'),
   publicPath: ''
  },
