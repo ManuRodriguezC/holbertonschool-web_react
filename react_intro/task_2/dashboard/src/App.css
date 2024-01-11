@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+  height: auto;
+}
+
+.App-logo {
+  height: 20vmin;
+  pointer-events: none;
+}
+
+
+.App-header {
+  margin: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  color: rgb(225, 29, 63);
+  border-bottom: 3px solid rgb(225, 29, 63);
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+.App-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 50vmin;
+  border-bottom: 3px solid rgb(225, 29, 63);
+}
+
+.App-body p {
+  margin: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.App-footer {
+  font-style: inherit;
+  font-weight: 600;
+}
