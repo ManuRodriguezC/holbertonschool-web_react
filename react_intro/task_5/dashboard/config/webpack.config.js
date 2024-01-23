@@ -1,11 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: [
+        'webpack-dev-server/client?http://localhost:8080',
+        'webpack/hot/dev-server',
+        './src/index.js'
+    ],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -26,5 +32,9 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         compress: true,
         port: 9000,
+        hot: true,
     },
+    plugins: [
+        new webpack.HotModuleReplacementPlugin(),
+    ],
 };
