@@ -1,0 +1,13 @@
+  /* Header */
+  
+  .App-header {
+    margin: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    color: rgb(225, 29, 63);
+    border-bottom: 3px solid rgb(225, 29, 63);
+    font-size: 18px;
+  }
