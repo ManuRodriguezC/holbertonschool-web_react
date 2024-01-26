@@ -46,5 +46,6 @@ export default function App({ isLoggedIn = true, logOut = () => {} }) {
 
 App.propTypes = {
   isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func,
 };
 
