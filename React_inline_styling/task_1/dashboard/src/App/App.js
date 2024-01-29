@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import { StyleSheet, css } from 'aphrodite'
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import Login from '../Login/Login';
@@ -8,6 +8,31 @@ import PropTypes from 'prop-types'
 import Notifications from '../Notifications/Notifications';
 import BodySection from '../BodySection/BodySection';
 import BodySectionWithMarginBottom from '../BodySection/BodySectionWithMarginBottom';
+
+const styles = StyleSheet.create({
+  body: {
+     fontFamily: "'Times New Roman', Times, serif",
+     textAlign: 'center',
+     height: 'auto',
+  },
+  appBody: {
+     display: 'flex',
+     flexDirection: 'column',
+     alignItems: 'start',
+     height: '50vmin',
+     borderBottom: '3px solid rgb(225, 29, 63)',
+  },
+  top: {
+     width: '100%',
+     height: '200px',
+     display: 'flex',
+     position: 'relative',
+     flexDirection: 'row-reverse',
+     justifyContent: 'space-between',
+     borderBottom: '3px solid rgb(225, 29, 63)',
+  },
+ });
+ 
 
 export default function App({ isLoggedIn = true, logOut = () => {} }) {
 
@@ -33,12 +58,12 @@ export default function App({ isLoggedIn = true, logOut = () => {} }) {
 ];
   
   return (
-    <div className="App">
-      <div className='top'>
+    <div className={css(styles.body)}>
+      <div className={css(styles.top)}>
         <Notifications data-testid="notifications" displayDrawer={isLoggedIn} listNotifications={listNotifications}/>
         <Header data-testid="header" />
       </div>
-      <div className="App-body">
+      <div className={css(styles.appBody)}>
         {!isLoggedIn ?
           <BodySectionWithMarginBottom title="Log in to continue">
             <Login data-testid="login" />

@@ -1,5 +1,4 @@
 import React from "react"
-import './CourseList.css'
 import PropTypes from 'prop-types'
 
 export default function CourseListRow({ isHeader = false, textFirstCell, textSecondCell = null}) {
