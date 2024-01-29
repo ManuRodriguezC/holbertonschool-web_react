@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
      justifyContent: 'space-between',
      borderBottom: '3px solid rgb(225, 29, 63)',
   },
+  footer: {}
  });
  
 
@@ -77,7 +78,7 @@ export default function App({ isLoggedIn = true, logOut = () => {} }) {
           <p>This is the place for the random text</p>
         </BodySection>
       </div>
-      <Footer data-testind="footer" />
+      <Footer data-testind="footer" className={css(styles.footer)} />
     </div>
   );
 }
